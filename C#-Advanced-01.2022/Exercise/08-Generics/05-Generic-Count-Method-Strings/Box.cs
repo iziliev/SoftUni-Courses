@@ -4,25 +4,26 @@ using System.Text;
 
 namespace GenericCountMethodStrings
 {
-    public class Box
+    public class Box<T>
+        where T :IComparable<T>
     {
-        private List<string> items;
+        private List<T> items;
         public Box()
         {
-            this.items = new List<string>();
+            this.items = new List<T>();
         }
 
-        public void Add(string item)
+        public void Add(T item)
         {
             this.items.Add(item);
         }
-        public int CompareBoxItems(string item)
+        public int CompareBoxItems(T item)
         {
             var count = 0;
             
             foreach (var items in this.items)
             {
-                if (items.CompareTo(item) > 0)
+                if (items.CompareTo(item)>0)
                 {
                     count++;
                 }

@@ -4,26 +4,25 @@ using System.Text;
 
 namespace GenericBoxOfString
 {
-    public class Box
+    public class Box<T>
     {
-        private List<string> items;
+        private List<T> items;
         public Box()
         {
-            this.items = new List<string>();
+            this.items = new List<T>();
         }
 
-        public void Add(string item)
+        public void Add(T item)
         {
             this.items.Add(item);
         }
         public override string ToString()
         {
             var sb = new StringBuilder();
-            for (int i = 0; i < this.items.Count; i++)
+            
+            foreach (T item in this.items)
             {
-                var currentItem = this.items[i];
-
-                sb.AppendLine($"{currentItem.GetType()}: {currentItem}");
+                sb.AppendLine($"{typeof(T)}");
             }
 
             return sb.ToString().Trim();

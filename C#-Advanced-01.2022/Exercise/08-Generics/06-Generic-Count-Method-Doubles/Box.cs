@@ -4,19 +4,20 @@ using System.Text;
 
 namespace GenericCountMethodDoubles
 {
-    public class Box
+    public class Box<T>
+        where T : IComparable<T>
     {
-        private List<double> items;
+        private List<T> items;
         public Box()
         {
-            this.items = new List<double>();
+            this.items = new List<T>();
         }
 
-        public void Add(double item)
+        public void Add(T item)
         {
             this.items.Add(item);
         }
-        public int CompareBoxItems(double item)
+        public int CompareBoxItems(T item)
         {
             var count = 0;
             

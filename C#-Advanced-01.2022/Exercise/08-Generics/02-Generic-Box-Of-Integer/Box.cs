@@ -4,16 +4,16 @@ using System.Text;
 
 namespace GenericBoxOfInteger
 {
-    public class Box
+    public class Box<T>
     {
-        private List<int> items;
+        private List<T> items;
 
         public Box()
         {
-            this.items = new List<int>();
+            this.items = new List<T>();
         }
 
-        public void Add(int item)
+        public void Add(T item)
         {
             this.items.Add(item);
         }
@@ -21,10 +21,9 @@ namespace GenericBoxOfInteger
         public override string ToString()
         {
             var sb = new StringBuilder();
-            for (int i = 0; i < this.items.Count; i++)
+            foreach (var item in this.items)
             {
-                var currentItem = this.items[i];
-                sb.AppendLine($"{currentItem.GetType()} {currentItem}");
+                sb.AppendLine($"{typeof(T)}");
             }
 
             return sb.ToString().Trim();

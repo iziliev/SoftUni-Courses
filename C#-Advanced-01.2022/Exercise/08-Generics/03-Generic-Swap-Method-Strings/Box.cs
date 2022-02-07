@@ -4,15 +4,15 @@ using System.Text;
 
 namespace GenericSwapMethodStrings
 {
-    public class Box
+    public class Box<T>
     {
-        private List<string> items;
+        private List<T> items;
         public Box()
         {
-            this.items = new List<string>();
+            this.items = new List<T>();
         }
 
-        public void Add(string item)
+        public void Add(T item)
         {
             this.items.Add(item);
         }
@@ -32,10 +32,9 @@ namespace GenericSwapMethodStrings
         public override string ToString()
         {
             var sb = new StringBuilder();
-            for (int i = 0; i < this.items.Count; i++)
+            foreach (var item in this.items)
             {
-                var currentItem = this.items[i];
-                sb.AppendLine($"{currentItem.GetType()} {currentItem}");
+                sb.AppendLine($"{typeof(T)} {item}");
             }
 
             return sb.ToString().Trim();
