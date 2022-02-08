@@ -6,7 +6,7 @@ namespace GenericBoxOfInteger
     {
         public static void Main(string[] args)
         {
-            var box = new Box();
+            var box = new Box<int>();
 
             var n = int.Parse(Console.ReadLine());
 

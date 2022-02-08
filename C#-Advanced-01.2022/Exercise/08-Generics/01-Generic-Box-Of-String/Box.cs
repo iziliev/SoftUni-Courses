@@ -20,9 +20,9 @@ namespace GenericBoxOfString
         {
             var sb = new StringBuilder();
             
-            foreach (T item in this.items)
+            foreach (var item in this.items)
             {
-                sb.AppendLine($"{typeof(T)}");
+                sb.AppendLine($"{typeof(T)}: {item}");
             }
 
             return sb.ToString().Trim();

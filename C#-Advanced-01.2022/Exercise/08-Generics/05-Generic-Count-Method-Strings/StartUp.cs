@@ -6,7 +6,7 @@ namespace GenericCountMethodStrings
     {
         public static void Main()
         {
-            var box = new Box();
+            var box = new Box<string>();
 
             var n = int.Parse(Console.ReadLine());
 

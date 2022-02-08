@@ -6,7 +6,7 @@ namespace GenericCountMethodDoubles
     {
         public static void Main()
         {
-            var box = new Box();
+            var box = new Box<double>();
 
             var n = int.Parse(Console.ReadLine());
 

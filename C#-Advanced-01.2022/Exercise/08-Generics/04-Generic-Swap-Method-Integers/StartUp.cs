@@ -7,7 +7,7 @@ namespace GenericSwapMethodIntegers
     {
         public static void Main()
         {
-            var box = new Box();
+            var box = new Box<int>();
 
             var n = int.Parse(Console.ReadLine());
 

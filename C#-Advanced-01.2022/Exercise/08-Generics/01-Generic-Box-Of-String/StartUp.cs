@@ -6,7 +6,7 @@ namespace GenericBoxOfString
     {
         public static void Main()
         {
-            Box box = new Box();
+            var box = new Box<string>();
 
             var n = int.Parse(Console.ReadLine());
 

@@ -34,7 +34,7 @@ namespace GenericSwapMethodIntegers
             var sb = new StringBuilder();
             foreach (var item in this.items)
             {
-                sb.AppendLine($"{typeof(T)} {item}");
+                sb.AppendLine($"{typeof(T)}: {item}");
             }
 
             return sb.ToString().Trim();
