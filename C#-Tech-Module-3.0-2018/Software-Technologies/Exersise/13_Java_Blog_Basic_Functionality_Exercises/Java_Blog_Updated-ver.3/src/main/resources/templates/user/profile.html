@@ -1,0 +1,46 @@
+<main>
+    <div class="container body-content span=8 offset=2">
+        <div class="container body-content">
+            <!--<div class="row"></div>-->
+            <div class="form-horizontal">
+                <legend>Personal Info</legend>
+
+                <article class="well">
+                    <div class="form-group">
+                        <div class="col-sm-2 control-label">
+                            <img th:src="${user.avatar}" align="left" width="160px" height="200px" alt="" style="margin: 0 0 0 0;"/>
+                        </div>
+
+                        <div class="col-sm-8 control-label">
+                            <h4 class="col-sm-3 control-label">Full Name:</h4>
+                            <div class="col-sm-5 control-label" style="text-align:left">
+
+                                <h4 th:text="${user.fullName}"></h4>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-8 control-label">
+                            <h4 class="col-sm-3 control-label">Email:</h4>
+                            <div class="col-sm-5 control-label" style="text-align:left">
+
+                                <h4 th:text="${user.email}"></h4>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+            <footer>
+                <div class="pull-right">
+                    <a class="btn btn-default btn-xs" th:href="@{/}">&laquo; back</a>
+                </div>
+
+            </footer>
+        </div>
+
+    </div>
+
+
+</main>

@@ -1,0 +1,28 @@
+<main>
+    <div class="container body-content">
+        <div class="row">
+
+            <th:block th:each="article : ${articles}">
+                <div class="col-md-12">
+                    <article>
+                        <header>
+                            <h2 th:text="${article.title}"></h2>
+                        </header>
+
+                        <img th:src="${article.picture}" align="left" width="300px" height="169px" alt="" style="margin: 10px 20px 5px 0px"/>
+
+
+                        <p style="text-indent: 2em; margin: 10px 0px 5px 0px; text-align:justify;" th:text="${article.content}"></p>
+
+                        <footer>
+                            <div class="pull-right">
+                                <a class="btn btn-default btn-xs"
+                                   th:href="@{/}">&laquo; back</a>
+                            </div>
+                        </footer>
+                    </article>
+                </div>
+            </th:block>
+        </div>
+    </div>
+</main>

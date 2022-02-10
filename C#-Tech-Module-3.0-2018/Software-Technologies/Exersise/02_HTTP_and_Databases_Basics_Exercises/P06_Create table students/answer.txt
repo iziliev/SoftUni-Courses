@@ -1,0 +1,26 @@
+USE `softuni`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='softuni';
+SHOW TABLE STATUS FROM `softuni`;
+SHOW FUNCTION STATUS WHERE `Db`='softuni';
+SHOW PROCEDURE STATUS WHERE `Db`='softuni';
+SHOW TRIGGERS FROM `softuni`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='softuni';
+SHOW ENGINES;
+SHOW VARIABLES LIKE 'collation_database';
+CREATE TABLE `students` (
+	`Id` INT(11) NOT NULL AUTO_INCREMENT,
+	`Name` VARCHAR(50) NOT NULL DEFAULT '0',
+	`Age` INT(11) NULL DEFAULT '0',
+	PRIMARY KEY (`Id`)
+)
+COLLATE='latin1_swedish_ci'
+;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='softuni';
+SHOW TABLE STATUS FROM `softuni`;
+SHOW FUNCTION STATUS WHERE `Db`='softuni';
+SHOW PROCEDURE STATUS WHERE `Db`='softuni';
+SHOW TRIGGERS FROM `softuni`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='softuni';
+SHOW CREATE TABLE `softuni`.`students`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `softuni`.`students`;
