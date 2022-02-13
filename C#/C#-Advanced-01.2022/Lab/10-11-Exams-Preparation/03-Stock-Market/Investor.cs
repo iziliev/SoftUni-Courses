@@ -6,64 +6,84 @@ namespace StockMarket
 {
     public class Investor
     {
-        private List<Stock> stocks;
-        public Investor(string fullName, string emailAddress, decimal moneyToInvest,string brokerName)
+        public Investor(string fullName, string emailAddress, decimal moneyToInvest, string brokerName)
         {
-            this.FullName = fullName;
-            this.EmailAddress = emailAddress;
-            this.MoneyToInwest = moneyToInvest;
-            this.BrokerName = brokerName;
-            this.stocks = new List<Stock>();
+            FullName = fullName;
+            EmailAddress = emailAddress;
+            MoneyToInvest = moneyToInvest;
+            BrokerName = brokerName;
+            Portfolio = new List<Stock>();
         }
 
-        public IReadOnlyCollection<Stock> Stocks=>this.stocks;
+        public List<Stock> Portfolio { get; set; }
         public string FullName { get; set; }
         public string EmailAddress { get; set; }
-        public decimal MoneyToInwest { get; set; }
+        public decimal MoneyToInvest { get; set; }
         public string BrokerName { get; set; }
-        public int Count => this.stocks.Count;
+        public int Count => Portfolio.Count;
+
         public void BuyStock(Stock stock)
         {
-            if (!this.stocks.Any(x=>x.CompanyName==stock.CompanyName)&&stock.MarketCapitalization>10000 && this.MoneyToInwest>=stock.PricePerShare)
+            if (stock.MarketCapitalization > 10000 && MoneyToInvest >= stock.PricePerShare)
             {
-                this.MoneyToInwest -= stock.PricePerShare;
-                this.stocks.Add(stock);
+                MoneyToInvest -= stock.PricePerShare;
+                Portfolio.Add(stock);
             }
         }
+
         public string SellStock(string companyName, decimal sellPrice)
         {
-            if (!this.stocks.Any(x=>x.CompanyName==companyName))
+
+            Stock stock = Portfolio.FirstOrDefault(x => x.CompanyName == companyName);
+
+            if (stock == null)
             {
                 return $"{companyName} does not exist.";
             }
-            else if (this.stocks.Any(x=>x.CompanyName==companyName&&x.PricePerShare<sellPrice))
+
+            if (stock.PricePerShare > sellPrice)
             {
-                return $"Cannot sell {companyName}.";
+                return $"Cannot sell {stock.CompanyName}.";
             }
-            else
-            {
-                this.stocks.Remove(this.stocks.FirstOrDefault(x=>x.CompanyName==companyName));
-                this.MoneyToInwest+=sellPrice;
-                return $"{companyName} was sold.";
-            }
+
+            Portfolio.Remove(stock);
+            MoneyToInvest += sellPrice;
+            return $"{companyName} was sold.";
         }
         public Stock FindStock(string companyName)
         {
-            return this.stocks.Any(x => x.CompanyName == companyName) ? this.stocks.FirstOrDefault(x => x.CompanyName == companyName) : null;
+            Stock stock = Portfolio.FirstOrDefault(x => x.CompanyName == companyName);
+            if (stock != null)
+            {
+                return stock;
+            }
+            return null;
         }
         public Stock FindBiggestCompany()
         {
-            return this.stocks.Any() ? this.stocks.OrderByDescending(x => x.MarketCapitalization).FirstOrDefault() : null;
+            if (Portfolio.Count > 0)
+            {
+                Stock stockBiggestCom = Portfolio.OrderByDescending(x => x.MarketCapitalization).First();
+                return stockBiggestCom;
+            }
+            return null;
         }
+
         public string InvestorInformation()
         {
-            var sb = new StringBuilder();
-            sb.AppendLine($"The investor {this.FullName} with a broker {this.BrokerName} has stocks:");
-            foreach (var stock in this.stocks)
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"The investor {FullName} with a broker {BrokerName} has stocks:");
+            foreach (Stock stock in Portfolio)
             {
                 sb.AppendLine(stock.ToString());
             }
-            return sb.ToString().Trim();
+
+            return sb.ToString().TrimEnd();
         }
     }
+
+
+
+
+
 }

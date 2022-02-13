@@ -44,8 +44,6 @@ namespace Parking
             // The cars are parked in Underground parking garage:
             // Peugeot 307(2011)
             // Audi S4(2005)
-
-
         }
     }
 }

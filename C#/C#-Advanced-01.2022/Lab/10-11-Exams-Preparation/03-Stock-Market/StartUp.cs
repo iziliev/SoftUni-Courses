@@ -47,8 +47,6 @@ namespace StockMarket
             // Price per share: $743.17
             // Market capitalization: $4845468.40
 
-            Console.WriteLine(investor.FindStock("Twitter"));
-
             // Print investor information
             Console.WriteLine(investor.InvestorInformation());
 
