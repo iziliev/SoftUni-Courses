@@ -1,0 +1,14 @@
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\bin\Debug\netcoreapp3.1\05-Stack-of-Strings.exe
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\bin\Debug\netcoreapp3.1\05-Stack-of-Strings.deps.json
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\bin\Debug\netcoreapp3.1\05-Stack-of-Strings.runtimeconfig.json
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\bin\Debug\netcoreapp3.1\05-Stack-of-Strings.runtimeconfig.dev.json
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\bin\Debug\netcoreapp3.1\05-Stack-of-Strings.dll
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\bin\Debug\netcoreapp3.1\05-Stack-of-Strings.pdb
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\obj\Debug\netcoreapp3.1\05-Stack-of-Strings.csproj.AssemblyReference.cache
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\obj\Debug\netcoreapp3.1\05-Stack-of-Strings.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\obj\Debug\netcoreapp3.1\05-Stack-of-Strings.AssemblyInfoInputs.cache
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\obj\Debug\netcoreapp3.1\05-Stack-of-Strings.AssemblyInfo.cs
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\obj\Debug\netcoreapp3.1\05-Stack-of-Strings.csproj.CoreCompileInputs.cache
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\obj\Debug\netcoreapp3.1\05-Stack-of-Strings.dll
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\obj\Debug\netcoreapp3.1\05-Stack-of-Strings.pdb
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\05-Stack-of-Strings\obj\Debug\netcoreapp3.1\05-Stack-of-Strings.genruntimeconfig.cache

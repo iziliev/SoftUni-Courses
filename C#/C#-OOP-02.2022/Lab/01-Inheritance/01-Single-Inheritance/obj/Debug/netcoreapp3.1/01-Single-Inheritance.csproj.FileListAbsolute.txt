@@ -1,0 +1,14 @@
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\bin\Debug\netcoreapp3.1\01-Single-Inheritance.exe
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\bin\Debug\netcoreapp3.1\01-Single-Inheritance.deps.json
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\bin\Debug\netcoreapp3.1\01-Single-Inheritance.runtimeconfig.json
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\bin\Debug\netcoreapp3.1\01-Single-Inheritance.runtimeconfig.dev.json
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\bin\Debug\netcoreapp3.1\01-Single-Inheritance.dll
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\bin\Debug\netcoreapp3.1\01-Single-Inheritance.pdb
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\obj\Debug\netcoreapp3.1\01-Single-Inheritance.csproj.AssemblyReference.cache
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\obj\Debug\netcoreapp3.1\01-Single-Inheritance.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\obj\Debug\netcoreapp3.1\01-Single-Inheritance.AssemblyInfoInputs.cache
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\obj\Debug\netcoreapp3.1\01-Single-Inheritance.AssemblyInfo.cs
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\obj\Debug\netcoreapp3.1\01-Single-Inheritance.csproj.CoreCompileInputs.cache
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\obj\Debug\netcoreapp3.1\01-Single-Inheritance.dll
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\obj\Debug\netcoreapp3.1\01-Single-Inheritance.pdb
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-03.2022\Lab\01-Inheritance\01-Single-Inheritance\obj\Debug\netcoreapp3.1\01-Single-Inheritance.genruntimeconfig.cache
