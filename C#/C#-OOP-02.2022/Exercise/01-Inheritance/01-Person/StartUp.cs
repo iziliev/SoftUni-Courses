@@ -9,22 +9,25 @@ namespace Person
             string name = Console.ReadLine();
             int age = int.Parse(Console.ReadLine());
 
-            if (age<0)
+            try
             {
-                return;
-            }
+                Person person = null;
 
-            Person person = null;
+                if (age <= 15)
+                {
+                    person = new Child(name, age);
+                }
+                else
+                {
+                    person = new Person(name, age);
+                }
 
-            if (age<=15)
-            {
-                person = new Child(name, age);
+                Console.WriteLine(person);
             }
-            else
+            catch (Exception ex)
             {
-                person = new Person(name, age);
-            }
-            Console.WriteLine(person);
+                Console.WriteLine(ex.Message);
+            }       
 
         }
     }
