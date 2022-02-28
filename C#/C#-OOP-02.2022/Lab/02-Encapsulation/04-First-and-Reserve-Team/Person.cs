@@ -24,65 +24,65 @@ namespace PersonsInfo
 
         public decimal Salary
         {
-            get 
-            { 
-                return salary; 
-            }
-            private set 
+            get
             {
-                //if (value<650)
-                //{
-                //    throw new ArgumentException(invalidSalary);
-                //}
-                salary = value; 
+                return salary;
+            }
+            private set
+            {
+                if (value < 650)
+                {
+                    throw new ArgumentException(invalidSalary);
+                }
+                salary = value;
             }
         }
 
         public int Age
         {
-            get 
-            { 
-                return age; 
-            }
-            private set 
+            get
             {
-                if (value <= 0)
+                return age;
+            }
+            private set
+            {
+                if (value < 0)
                 {
                     throw new ArgumentException(invalidAge);
                 }
-                age = value; 
+                age = value;
             }
         }
 
         public string LastName
         {
-            get 
-            { 
-                return lastName; 
-            }
-            private set 
+            get
             {
-                if (value.Length < 3)
+                return lastName;
+            }
+            private set
+            {
+                if (value.Length < 3 || string.IsNullOrEmpty(value))
                 {
                     throw new ArgumentException(invalidLastName);
                 }
-                lastName = value; 
+                lastName = value;
             }
         }
 
         public string FirstName
         {
-            get 
-            { 
-                return firstName; 
-            }
-            private set 
+            get
             {
-                if (value.Length<3)
+                return firstName;
+            }
+            private set
+            {
+                if (value.Length < 3 || string.IsNullOrEmpty(value))
                 {
                     throw new ArgumentException(invalidFirstName);
                 }
-                firstName = value; 
+                firstName = value;
             }
         }
         public override string ToString()

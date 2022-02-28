@@ -16,7 +16,7 @@
         public decimal Salary { get; private set; }
         public override string ToString()
         {
-            return $"{this.FirstName} receives {this.Salary:f2} leva.";
+            return $"{this.FirstName} {this.LastName} receives {this.Salary:f2} leva.";
         }
         public void IncreaseSalary(decimal percentage)
         {

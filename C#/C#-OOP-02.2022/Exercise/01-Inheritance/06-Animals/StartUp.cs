@@ -8,7 +8,7 @@ namespace Animals
         public static void Main()
         {
             var input = string.Empty;
-            var animals = new List<Animals>();
+            var animals = new List<Animal>();
 
             while ((input=Console.ReadLine())!="Beast!")
             {
@@ -36,14 +36,14 @@ namespace Animals
                 {
                     Console.WriteLine(animal.GetType().Name);
                     Console.WriteLine(animal);
-                    animal.ProduceSound();
+                    Console.WriteLine(animal.ProduceSound());
                 }
             }
         }
 
-        private static void AddAnimal(List<Animals> animals, string @object, string[] args)
+        private static void AddAnimal(List<Animal> animals, string @object, string[] args)
         {
-            Animals animal = null;
+            Animal animal = null;
             switch (@object)
             {
                 case "Dog":
@@ -56,7 +56,7 @@ namespace Animals
                     animal = new Frog(args[0], int.Parse(args[1]), args[2]);
                     break;
                 case "Kittens":
-                    animal = new Kittens(args[0], int.Parse(args[1]));
+                    animal = new Kitten(args[0], int.Parse(args[1]));
                     break;
                 case "Tomkat":
                     animal = new Tomcat(args[0], int.Parse(args[1]));

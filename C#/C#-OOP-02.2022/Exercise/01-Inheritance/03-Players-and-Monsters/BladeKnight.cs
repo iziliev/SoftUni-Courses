@@ -2,8 +2,8 @@
 {
     public class BladeKnight : DarkKnight
     {
-        public BladeKnight(int level, string username) 
-            : base(level, username)
+        public BladeKnight(string username, int level) 
+            : base(username, level)
         {
         }
     }

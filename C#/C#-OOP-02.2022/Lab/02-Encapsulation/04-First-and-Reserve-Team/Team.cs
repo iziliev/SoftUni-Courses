@@ -7,29 +7,31 @@ namespace PersonsInfo
     public class Team
     {
         private string name;
-        private List<Person> firstTeams;
+        private List<Person> firstTeam;
         private List<Person> reserveTeam;
 
         public Team(string name)
         {
             Name = name;
-            this.firstTeams = new List<Person>();
+            this.firstTeam = new List<Person>();
             this.reserveTeam = new List<Person>();
         }
 
-        public IReadOnlyCollection<Person> FirstTeams => firstTeams;
-        public IReadOnlyCollection<Person> ReserveTeam => reserveTeam;
+        public IReadOnlyCollection<Person> FirstTeam => this.firstTeam;
+
+        public IReadOnlyCollection<Person> ReserveTeam => this.reserveTeam;
+       
         public string Name
         {
             get { return name; }
-            set { name = value; }
+            private set { name = value; }
         }
 
         public void AddPlayer(Person person)
         {
             if (person.Age < 40)
             {
-                this.firstTeams.Add(person);
+                this.firstTeam.Add(person);
             }
             else
             {
@@ -40,7 +42,7 @@ namespace PersonsInfo
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.AppendLine($"First team has {this.firstTeams.Count} players.");
+            sb.AppendLine($"First team has {this.FirstTeam.Count} players.");
             sb.AppendLine($"Reserve team has {this.reserveTeam.Count} players.");
             return sb.ToString().Trim();
         }

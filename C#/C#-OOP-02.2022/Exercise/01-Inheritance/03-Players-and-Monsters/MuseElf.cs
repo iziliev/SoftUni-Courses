@@ -2,8 +2,8 @@
 {
     public class MuseElf : Elf
     {
-        public MuseElf(int level, string username) 
-            : base(level, username)
+        public MuseElf(string username, int level) 
+            : base(username, level)
         {
         }
     }

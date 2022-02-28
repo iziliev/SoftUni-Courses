@@ -9,9 +9,9 @@ namespace Animals
             : base(name, age, Gender)
         {
         }
-        public override void ProduceSound()
+        public override string ProduceSound()
         {
-            Console.WriteLine("MEOW");
+            return "MEOW";
         }
     }
 }

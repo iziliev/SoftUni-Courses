@@ -2,8 +2,8 @@
 {
     public class DarkWizard : Wizard
     {
-        public DarkWizard(int level, string username) 
-            : base(level, username)
+        public DarkWizard(string username, int level) 
+            : base(username, level)
         {
         }
     }

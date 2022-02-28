@@ -2,8 +2,8 @@
 {
     public class SoulMaster : DarkWizard
     {
-        public SoulMaster(int level, string username) 
-            : base(level, username)
+        public SoulMaster(string username, int level) 
+            : base(username, level)
         {
         }
     }

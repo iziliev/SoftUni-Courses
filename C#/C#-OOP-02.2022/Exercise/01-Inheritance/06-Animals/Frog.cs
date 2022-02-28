@@ -2,15 +2,15 @@
 
 namespace Animals
 {
-    public class Frog : Animals
+    public class Frog : Animal
     {
         public Frog(string name, int age, string gender) 
             : base(name, age, gender)
         {
         }
-        public override void ProduceSound()
+        public override string ProduceSound()
         {
-            Console.WriteLine("Ribbit");
+            return "Ribbit";
         }
     }
 }

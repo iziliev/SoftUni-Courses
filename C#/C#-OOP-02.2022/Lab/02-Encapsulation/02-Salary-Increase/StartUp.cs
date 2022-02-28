@@ -22,7 +22,6 @@ namespace PersonsInfo
             var parcentage = decimal.Parse(Console.ReadLine());
             persons.ForEach(p => p.IncreaseSalary(parcentage));
             persons.ForEach(p => Console.WriteLine(p.ToString()));
-
         }
     }
 }
