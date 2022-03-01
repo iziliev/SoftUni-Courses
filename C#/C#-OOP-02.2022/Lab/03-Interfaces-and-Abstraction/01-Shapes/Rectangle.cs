@@ -29,26 +29,17 @@ namespace Shapes
 
         public void Draw()
         {
-            Console.WriteLine(new String('*',this.Width));
-
-            for (int i = 0; i < this.Height; i++)
-            {
-                for (int j = 0; j < this.Width; j++)
-                {
-                    if (j==0 || j == this.Width-1)
-                    {
-                        Console.Write("*");
-                    }
-                    else
-                    {
-                        Console.Write(" ");
-                    }
-                }
-                Console.WriteLine();
-            }
-
-
-            Console.WriteLine(new String('*', this.Width));
+            DrawLine(this.width, '*', '*');
+            for (int i = 1; i < this.height - 1; ++i)
+                DrawLine(this.width, '*', ' ');
+            DrawLine(this.width, '*', '*');
+        }
+        private void DrawLine(int width, char end, char mid)
+        {
+            Console.Write(end);
+            for (int i = 1; i < width - 1; ++i)
+                Console.Write(mid);
+            Console.WriteLine(end);
         }
     }
 }
