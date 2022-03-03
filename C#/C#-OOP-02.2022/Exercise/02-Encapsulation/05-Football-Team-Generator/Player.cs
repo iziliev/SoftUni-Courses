@@ -32,7 +32,7 @@ namespace _05_Football_Team_Generator
             }
             private set
             {
-                if (string.IsNullOrEmpty(value))
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException(errorName);
                 }
@@ -52,7 +52,6 @@ namespace _05_Football_Team_Generator
                 endurance = value;
             }
         }
-
 
         public int Sprint
         {
@@ -105,6 +104,7 @@ namespace _05_Football_Team_Generator
                 shooting = value;
             }
         }
+
         public double SkillLevel => (this.Endurance + this.Sprint + this.Dribble + this.Passing + this.Shooting) / 5.0;
         private static void ValidateSkill(int value, string varName)
         {

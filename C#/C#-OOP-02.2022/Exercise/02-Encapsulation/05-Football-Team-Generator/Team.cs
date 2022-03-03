@@ -23,7 +23,7 @@ namespace _05_Football_Team_Generator
             }
             set
             {
-                if (string.IsNullOrEmpty(value))
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException(errorName);
                 }
@@ -42,12 +42,8 @@ namespace _05_Football_Team_Generator
             }
             this.players.Remove(player);
         }
-        public void AddPlayer(Player player, string teamName)
+        public void AddPlayer(Player player)
         {
-            if (teamName != this.Name)
-            {
-                throw new Exception($"Team {teamName} does not exist.");
-            }
             this.players.Add(player);
         }
 

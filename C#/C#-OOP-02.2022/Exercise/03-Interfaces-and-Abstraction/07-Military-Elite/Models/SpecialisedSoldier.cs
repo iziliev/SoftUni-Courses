@@ -8,13 +8,11 @@ namespace _07_Military_Elite.Models
 {
     public abstract class SpecialisedSoldier : Private, ISpecialisedSoldier
     {
-        protected SpecialisedSoldier(int id, string firstName, string lastname, decimal salary, Corps corp) 
-            : base(id, firstName, lastname, salary)
+        public SpecialisedSoldier(int id, string firstName, string lastName, decimal salary, Corps corp) 
+            : base(id, firstName, lastName, salary)
         {
-            this.Corp = corp;
         }
 
-        public Corps Corp { get; }
-
+        public Corps Corp { get; private set; }
     }
 }

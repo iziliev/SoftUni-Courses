@@ -7,10 +7,10 @@ namespace _04_Pizza_Calories
     public class Dough
     {
         private const string exeptionType = "Invalid type of dough.";
-        private const string exeptionWeght = "Dough weight should be in the range [1..200].";
+        private const string exeptionWeight = "Dough weight should be in the range [1..200].";
         private const int doughtDefaultCalories = 2;
 
-        private Dictionary<string, double> modifiers = new Dictionary<string, double>()
+        private readonly Dictionary<string, double> modifiers = new Dictionary<string, double>()
         {
             {"white",1.5 },
             {"wholegrain",1.0 },
@@ -21,8 +21,8 @@ namespace _04_Pizza_Calories
 
         private string flourType;
         private string backingTechnique;
-        private int weight;
-        public Dough(string flourType, string backingTechnique, int weight)
+        private double weight;
+        public Dough(string flourType, string backingTechnique, double weight)
         {
             this.FlourType = flourType;
             this.BackingTechnique = backingTechnique;
@@ -39,7 +39,7 @@ namespace _04_Pizza_Calories
             {
                 if (!modifiers.ContainsKey(value.ToLower()))
                 {
-                    throw new Exception(exeptionType);
+                    throw new ArgumentException(exeptionType);
                 }
                 flourType = value;
             }
@@ -55,12 +55,12 @@ namespace _04_Pizza_Calories
             {
                 if (!modifiers.ContainsKey(value.ToLower()))
                 {
-                    throw new Exception(exeptionType);
+                    throw new ArgumentException(exeptionType);
                 }
                 backingTechnique = value;
             }
         }
-        public int Weight
+        public double Weight
         {
             get
             {
@@ -70,13 +70,13 @@ namespace _04_Pizza_Calories
             {
                 if (value < 1 || value > 200)
                 {
-                    throw new Exception(exeptionWeght);
+                    throw new ArgumentException(exeptionWeight);
                 }
                 weight = value;
             }
         }
 
-        public double Calories => doughtDefaultCalories * this.weight * modifiers[this.FlourType.ToLower()] * modifiers[this.BackingTechnique.ToLower()];
+        public double Calories => doughtDefaultCalories * this.Weight * modifiers[this.FlourType.ToLower()] * modifiers[this.BackingTechnique.ToLower()];
 
     }
 }

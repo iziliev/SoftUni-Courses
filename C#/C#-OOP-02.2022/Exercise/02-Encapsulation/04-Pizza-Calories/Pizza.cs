@@ -8,13 +8,12 @@ namespace _04_Pizza_Calories
     public class Pizza
     {
         private string name;
-        private Dough dough;
         private List<Topping> toppings;
 
         public Pizza(string name, Dough dough)
         {
             this.Name = name;
-            this.dough = dough;
+            this.Dough = dough;
             this.toppings = new List<Topping>();
         }
 
@@ -26,30 +25,28 @@ namespace _04_Pizza_Calories
             }
             private set
             {
-                if (string.IsNullOrEmpty(value) || value.Length > 15)
+                if (string.IsNullOrWhiteSpace(value) || value.Length < 1 || value.Length > 15)
                 {
                     throw new ArgumentException("Pizza name should be between 1 and 15 symbols.");
                 }
                 name = value;
             }
         }
+        public Dough Dough { get; private set; }
         public void AddTopping(Topping topping)
         {
             if (this.toppings.Count == 10)
             {
-                throw new Exception("Number of toppings should be in range [0..10].");
+                throw new ArgumentException("Number of toppings should be in range [0..10].");
             }
-            else
-            {
-                this.toppings.Add(topping);
-            }
+            this.toppings.Add(topping);
         }
-
-        public double Calories => this.dough.Calories + this.toppings.Sum(x => x.Calories);
+      
+        public double Calories => this.Dough.Calories + this.toppings.Sum(x => x.Calories);
 
         public override string ToString()
         {
-            return $"{this.name} - {this.Calories:f2} Calories.";
+            return $"{this.Name} - {this.Calories:f2} Calories.";
         }
     }
 }

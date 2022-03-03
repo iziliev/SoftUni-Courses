@@ -7,13 +7,13 @@ namespace _07_Military_Elite.Models
 {
     public class LieutenantGeneral : Private, ILieutenantGeneral
     {
-        public LieutenantGeneral(int id, string firstName, string lastname, decimal salary) 
-            : base(id, firstName, lastname, salary)
+        public LieutenantGeneral(int id, string firstName, string lastName, decimal salary) : 
+            base(id, firstName, lastName, salary)
         {
             this.Privates = new List<IPrivate>();
         }
 
-        public List<IPrivate> Privates { get; }
+        public List<IPrivate> Privates { get; private set; }
 
         public override string ToString()
         {

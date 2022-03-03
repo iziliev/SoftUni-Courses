@@ -6,6 +6,6 @@ namespace _07_Military_Elite.Contracts
 {
     public interface ISpy:ISoldier
     {
-        public int CodeNumber { get; }
+        public string CodeNumber { get; }
     }
 }

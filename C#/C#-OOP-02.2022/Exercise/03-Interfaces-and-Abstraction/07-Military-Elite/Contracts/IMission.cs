@@ -8,7 +8,6 @@ namespace _07_Military_Elite.Contracts
     public interface IMission
     {
         public string CodeName { get; }
-        public State State { get; set; }
-
+        public States State { get; set; }
     }
 }

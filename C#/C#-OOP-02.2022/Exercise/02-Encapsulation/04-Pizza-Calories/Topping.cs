@@ -8,7 +8,7 @@ namespace _04_Pizza_Calories
     {
         private const int toppingDefaultCalories = 2;
 
-        private Dictionary<string, double> modifiers = new Dictionary<string, double>()
+        private readonly Dictionary<string, double> modifiers = new Dictionary<string, double>()
         {
             {"meat",1.2 },
             {"veggies",0.8 },
@@ -27,29 +27,29 @@ namespace _04_Pizza_Calories
 
         public string ToppingType
         {
-            get 
-            { 
-                return toppingType; 
+            get
+            {
+                return toppingType;
             }
-            set 
+            set
             {
                 if (!modifiers.ContainsKey(value.ToLower()))
                 {
                     throw new ArgumentException($"Cannot place {value} on top of your pizza.");
                 }
-                toppingType = value; 
+                toppingType = value;
             }
         }
-        
+
         public int Weight
         {
-            get 
-            { 
-                return weight; 
-            }
-            set 
+            get
             {
-                if (value<0||value>50)
+                return weight;
+            }
+            set
+            {
+                if (value < 1 || value > 50)
                 {
                     throw new ArgumentException($"{this.ToppingType} weight should be in the range [1..50].");
                 }
@@ -57,6 +57,6 @@ namespace _04_Pizza_Calories
             }
         }
 
-        public double Calories => toppingDefaultCalories*this.Weight*modifiers[this.toppingType.ToLower()];
+        public double Calories => toppingDefaultCalories * this.Weight * modifiers[this.ToppingType.ToLower()];
     }
 }

@@ -5,17 +5,17 @@ using System.Text;
 
 namespace _07_Military_Elite.Models
 {
-    public class Repair : IRepairs
+    public class Repair : IRepair
     {
         public Repair(string partName, int workedHours)
         {
-            PartName = partName;
-            WorkedHours = workedHours;
+            this.PartName = partName;
+            this.WorkedHours = workedHours;
         }
 
-        public string PartName { get; }
+        public string PartName { get; private set;}
 
-        public int WorkedHours { get; }
+        public int WorkedHours { get; private set; }
 
         public override string ToString()
         {

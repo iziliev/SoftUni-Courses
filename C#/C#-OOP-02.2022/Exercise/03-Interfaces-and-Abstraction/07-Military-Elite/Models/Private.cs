@@ -7,16 +7,17 @@ namespace _07_Military_Elite.Models
 {
     public class Private : Soldier, IPrivate
     {
-        public Private(int id, string firstName, string lastname, decimal salary) 
-            : base(id, firstName, lastname)
+        public Private(int id, string firstName, string lastName, decimal salary) 
+            : base(id, firstName, lastName)
         {
-            this.Salary = salary;
+            this.Salary = salary;   
         }
 
-        public decimal Salary { get; }
+        public decimal Salary { get; private set; }
+
         public override string ToString()
         {
-            return $"Name: {this.FirstName} {this.Lastname} Id: {this.Id} Salary: {this.Salary:f2}";
+            return $"Name: {this.FirstName} {this.LastName} Id: {this.Id} Salary: {this.Salary}";
         }
     }
 }

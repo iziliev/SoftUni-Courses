@@ -8,13 +8,12 @@ namespace _07_Military_Elite.Models
 {
     public class Engineer : SpecialisedSoldier, IEngineer
     {
-        public Engineer(int id, string firstName, string lastname, decimal salary, Corps corp) 
-            : base(id, firstName, lastname, salary, corp)
+        public Engineer(int id, string firstName, string lastName, decimal salary, Corps corp) : base(id, firstName, lastName, salary, corp)
         {
-            this.Repairs = new List<IRepairs>();
+            this.Repairs = new List<IRepair>();
         }
 
-        public List<IRepairs> Repairs { get; }
+        public List<IRepair> Repairs { get; private set; }
 
         public override string ToString()
         {
@@ -24,7 +23,7 @@ namespace _07_Military_Elite.Models
             sb.AppendLine("Repairs:");
             foreach (var item in this.Repairs)
             {
-                sb.AppendLine($"  {item}");
+                sb.AppendLine(item.ToString());
             }
             return sb.ToString().Trim();
         }

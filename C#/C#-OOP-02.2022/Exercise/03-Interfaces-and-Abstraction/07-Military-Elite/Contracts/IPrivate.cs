@@ -6,6 +6,6 @@ namespace _07_Military_Elite.Contracts
 {
     public interface IPrivate:ISoldier
     {
-        public decimal Salary { get;}
+        public decimal Salary { get; }
     }
 }
