@@ -14,13 +14,13 @@ namespace _07_Military_Elite.Models
             this.State = state;
         }
 
-        public string CodeName { get; private set; }
+        public string CodeName { get; set; }
 
         public States State { get; set; }
 
         public override string ToString()
         {
-            return $"  Code Name: {this.CodeName} State: {this.State}";
+            return $"Code Name: {this.CodeName} State: {this.State}";
         }
     }
 }

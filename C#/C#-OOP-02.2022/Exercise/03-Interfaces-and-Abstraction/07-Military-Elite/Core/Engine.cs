@@ -32,7 +32,7 @@ namespace _07_Military_Elite.Core
 
                     for (int i = 5; i < args.Length; i++)
                     {
-                        var @private = (Private)soldiers[int.Parse(args[i])];
+                        IPrivate @private = (IPrivate)soldiers[int.Parse(args[i])];
                         lieutenantGeneral.Privates.Add(@private);
                     }
                     soldiers.Add(id, lieutenantGeneral);
@@ -76,14 +76,14 @@ namespace _07_Military_Elite.Core
                 }
                 else if (args[0] == "Spy")
                 {
-                    ISpy spy = new Spy(id, firstName, lastname, args[4]);
+                    ISpy spy = new Spy(id, firstName, lastname, int.Parse(args[4]));
                     soldiers.Add(id, spy);
                 }
             }
 
             foreach (var item in soldiers)
             {
-                Console.WriteLine(item.Value);
+                Console.WriteLine(item.Value.ToString());
             }
         }
     }

@@ -1,6 +1,7 @@
-﻿using _07_Military_Elite.Core;
+﻿using _08_Collection_Hierarchy.Core;
+using System;
 
-namespace _07_Military_Elite.Contracts
+namespace _08_Collection_Hierarchy
 {
     public class StartUp
     {

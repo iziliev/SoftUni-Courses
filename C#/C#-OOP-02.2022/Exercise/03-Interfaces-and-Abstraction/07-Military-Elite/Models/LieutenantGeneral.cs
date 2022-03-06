@@ -13,7 +13,7 @@ namespace _07_Military_Elite.Models
             this.Privates = new List<IPrivate>();
         }
 
-        public List<IPrivate> Privates { get; private set; }
+        public List<IPrivate> Privates { get; set; }
 
         public override string ToString()
         {

@@ -13,7 +13,7 @@ namespace _07_Military_Elite.Models
             this.Repairs = new List<IRepair>();
         }
 
-        public List<IRepair> Repairs { get; private set; }
+        public List<IRepair> Repairs { get; set; }
 
         public override string ToString()
         {
@@ -23,7 +23,7 @@ namespace _07_Military_Elite.Models
             sb.AppendLine("Repairs:");
             foreach (var item in this.Repairs)
             {
-                sb.AppendLine(item.ToString());
+                sb.AppendLine($"  {item}");
             }
             return sb.ToString().Trim();
         }

@@ -1,6 +1,7 @@
-﻿using _07_Military_Elite.Core;
+﻿using _09_Explicit_Interfaces.Core;
+using System;
 
-namespace _07_Military_Elite.Contracts
+namespace _09_Explicit_Interfaces
 {
     public class StartUp
     {

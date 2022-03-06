@@ -6,7 +6,7 @@ namespace _07_Military_Elite.Contracts
 {
     public interface IRepair
     {
-        public string PartName { get; }
-        public int WorkedHours { get; }
+        public string PartName { get; set; }
+        public int WorkedHours { get; set; }
     }
 }

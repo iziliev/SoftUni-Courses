@@ -1,17 +1,15 @@
-﻿
-using _03_Telephony.Contracts;
-using _03_Telephony.Exeptions;
+﻿using Telephony.Contracts;
+using Telephony.ExeptionMessages;
 using System;
 using System.Linq;
-using System.Text;
 
-namespace _03_Telephony.Models
+namespace Telephony.Models
 {
-    public class Phone : ICallable,IBrowseble
+    public class Smartphone : ICallable,IBrowseable
     {
         public string Browse(string URL)
         {
-            if (URL.Any(char.IsNumber))
+            if (URL.Any(char.IsDigit))
             {
                 throw new ArgumentException(ExeptionsMessages.urlEx);
             }
@@ -21,12 +19,12 @@ namespace _03_Telephony.Models
 
         public string Call(string number)
         {
-            if (number.Any(char.IsLetter))
+            if (!number.All(char.IsDigit))
             {
                 throw new ArgumentException(ExeptionsMessages.numberEx);
             }
 
-            return number.Length == 10 ? $"Calling... {number}" : $"Dialing... {number}";
+            return number.Length > 7 ? $"Calling... {number}" : $"Dialing... {number}";
         }
     }
 }

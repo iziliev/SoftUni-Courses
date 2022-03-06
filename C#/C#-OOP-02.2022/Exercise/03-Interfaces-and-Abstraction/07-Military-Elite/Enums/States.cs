@@ -7,6 +7,6 @@ namespace _07_Military_Elite.Enums
     public enum States
     {
         inProgress,
-        finished
+        Finished
     }
 }

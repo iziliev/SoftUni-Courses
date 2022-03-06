@@ -1,7 +1,4 @@
-﻿using PersonInfo.Contracts;
-using System;
-
-namespace PersonInfo.Models
+﻿namespace PersonInfo
 {
     public class Citizen : IPerson
     {

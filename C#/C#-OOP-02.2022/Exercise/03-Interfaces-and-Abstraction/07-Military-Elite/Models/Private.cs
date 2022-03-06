@@ -13,11 +13,11 @@ namespace _07_Military_Elite.Models
             this.Salary = salary;   
         }
 
-        public decimal Salary { get; private set; }
+        public decimal Salary { get; set; }
 
         public override string ToString()
         {
-            return $"Name: {this.FirstName} {this.LastName} Id: {this.Id} Salary: {this.Salary}";
+            return $"Name: {this.FirstName} {this.LastName} Id: {this.Id} Salary: {this.Salary:f2}";
         }
     }
 }

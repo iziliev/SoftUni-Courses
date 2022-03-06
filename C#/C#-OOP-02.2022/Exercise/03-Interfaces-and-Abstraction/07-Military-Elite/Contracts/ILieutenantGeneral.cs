@@ -6,6 +6,6 @@ namespace _07_Military_Elite.Contracts
 {
     public interface ILieutenantGeneral:IPrivate
     {
-        public List<IPrivate> Privates { get; }
+        public List<IPrivate> Privates { get; set; }
     }
 }

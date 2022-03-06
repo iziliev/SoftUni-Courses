@@ -1,4 +1,4 @@
-﻿namespace _03_Telephony.Contracts
+﻿namespace Telephony.Contracts
 {
     public interface ICallable
     {

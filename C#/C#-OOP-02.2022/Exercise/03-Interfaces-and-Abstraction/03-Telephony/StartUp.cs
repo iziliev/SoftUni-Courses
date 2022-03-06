@@ -1,7 +1,7 @@
-﻿using _03_Telephony.Core;
+﻿using Telephony.Core;
 using System;
 
-namespace _03_Telephony
+namespace Telephony
 {
     public class StartUp
     {

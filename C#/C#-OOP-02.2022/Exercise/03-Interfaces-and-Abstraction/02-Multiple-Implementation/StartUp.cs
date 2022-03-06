@@ -1,5 +1,4 @@
-﻿using PersonInfo.Core;
-using System;
+﻿using System;
 
 namespace PersonInfo
 {
@@ -7,8 +6,15 @@ namespace PersonInfo
     {
         public static void Main()
         {
-            Engine engine = new Engine();
-            engine.Run();
+            string name = Console.ReadLine();
+            int age = int.Parse(Console.ReadLine());
+            string id = Console.ReadLine();
+            string birthdate = Console.ReadLine();
+            IIdentifiable identifiable = new Citizen(name, age, id, birthdate);
+            IBirthable birthable = new Citizen(name, age, id, birthdate);
+
+            Console.WriteLine(identifiable.Id);
+            Console.WriteLine(birthable.Birthdate);
         }
     }
 }

@@ -7,6 +7,6 @@ namespace _07_Military_Elite.Contracts
 {
     public interface ISpecialisedSoldier:IPrivate
     {
-        public Corps Corp { get; }
+        public Corps Corp { get; set; }
     }
 }

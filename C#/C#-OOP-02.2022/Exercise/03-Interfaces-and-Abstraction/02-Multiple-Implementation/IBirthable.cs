@@ -1,4 +1,4 @@
-﻿namespace PersonInfo.Contracts
+﻿namespace PersonInfo
 {
     public interface IBirthable
     {

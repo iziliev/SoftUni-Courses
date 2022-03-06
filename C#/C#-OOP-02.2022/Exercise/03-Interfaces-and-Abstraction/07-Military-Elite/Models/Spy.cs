@@ -7,18 +7,18 @@ namespace _07_Military_Elite.Models
 {
     public class Spy : Soldier,ISpy
     {
-        public Spy(int id, string firstName, string lastName, string codeNumber) 
+        public Spy(int id, string firstName, string lastName, int codeNumber) 
             : base(id, firstName, lastName)
         {
             this.CodeNumber = codeNumber;
         }
 
-        public string CodeNumber { get; private set; }
+        public int CodeNumber { get; set; }
 
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.AppendLine(base.ToString());
+            sb.AppendLine($"Name: {this.FirstName} {this.LastName} Id: {this.Id}");
             sb.AppendLine($"Code Number: {this.CodeNumber}");
             return sb.ToString().Trim();
         }

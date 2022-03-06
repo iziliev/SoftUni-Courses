@@ -9,17 +9,17 @@ namespace _07_Military_Elite.Models
 {
     public class Commando : SpecialisedSoldier, ICommando
     {
-        public Commando(int id, string firstName, string lastName, decimal salary, Corps corp) 
+        public Commando(int id, string firstName, string lastName, decimal salary, Corps corp)
             : base(id, firstName, lastName, salary, corp)
         {
             this.Missions = new List<IMission>();
         }
 
-        public List<IMission> Missions { get; private set; }
+        public List<IMission> Missions { get; set; }
 
         public void CompleteMission(string codeName)
         {
-            this.Missions.FirstOrDefault(x => x.CodeName == codeName).State = States.finished;
+            this.Missions.FirstOrDefault(x => x.CodeName == codeName).State = States.Finished;
         }
 
         public override string ToString()
@@ -30,11 +30,8 @@ namespace _07_Military_Elite.Models
             sb.AppendLine("Missions:");
             foreach (var item in this.Missions)
             {
-                if (item.State==States.inProgress)
-                {
-                    sb.AppendLine(item.ToString());
-                }
-                
+                sb.AppendLine($"  {item}");
+
             }
             return sb.ToString().Trim();
         }

@@ -1,51 +1,65 @@
-﻿using _03_Telephony.Models;
+﻿using Telephony.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace _03_Telephony.Core
+namespace Telephony.Core
 {
     public class Engine
     {
-        private Phone phone;
-        private List<string> numbers;
-        private List<string> urls;
+        private Smartphone smartphone;
+        private IList<string> numbers;
+        private IList<string> urls;
 
         public Engine()
         {
-            this.phone = new Phone();
+            this.smartphone = new Smartphone();
             this.numbers = new List<string>();
-            this.urls = new List<string>(); 
+            this.urls = new List<string>();
         }
 
         public void Run()
         {
-            numbers = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
-            urls = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
+            this.numbers = Console.ReadLine().Split().ToList();
+            this.urls = Console.ReadLine().Split().ToList();
 
-            try
+            CallPhoneNumber();
+            BrowseURL();
+        }
+
+        private void BrowseURL()
+        {
+
+            foreach (var url in this.urls)
             {
-                foreach (var number in numbers)
+                try
                 {
-                    Console.WriteLine(this.phone.Call(number));
+
+                    {
+                        Console.WriteLine(this.smartphone.Browse(url));
+                    }
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine(ex.Message);
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+        }
 
-            try
+        private void CallPhoneNumber()
+        {
+            foreach (var number in this.numbers)
             {
-                foreach (var url in urls)
+                try
                 {
-                    Console.WriteLine(this.phone.Browse(url));              
+
+                    Console.WriteLine(this.smartphone.Call(number));
+
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
         }
     }
