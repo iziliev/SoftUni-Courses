@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Vehicles
+namespace _01_Vehicles.Contracts
 {
     public interface IVehicle
     {
-        public double FuelQuantity { get; set; }
-        public double FuelConsumption { get; set; }
+        public double Fuel { get; }
+
+        public double FuelConsumption { get; }
+
         public string Drive(int distance);
+
         public void Refuel(double liters);
     }
 }
-
