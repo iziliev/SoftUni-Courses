@@ -1,8 +1,9 @@
-﻿using _01_Vehicles.Contracts;
-using _01_Vehicles.Factory;
+﻿using _02_Vehicles_Extension.Contracts;
+using _02_Vehicles_Extension.Factory;
+using _02_Vehicles_Extension.Models;
 using System;
 
-namespace _01_Vehicles.Core
+namespace _02_Vehicles_Extension.Core
 {
     public class Engine
     {
@@ -10,6 +11,7 @@ namespace _01_Vehicles.Core
         {
             var car = new VehicleFactory().CreateCar(Console.ReadLine().Split());
             var truck = new VehicleFactory().CreateTruck(Console.ReadLine().Split());
+            var bus = new VehicleFactory().CreateBus(Console.ReadLine().Split());
 
             var n = int.Parse(Console.ReadLine());
 
@@ -23,12 +25,25 @@ namespace _01_Vehicles.Core
                 {
                     currentVehicle = car;
                 }
-                else
+                else if(args[1] == "Truck")
                 {
                     currentVehicle = truck;
                 }
+                else
+                {
+                    currentVehicle = bus;
+                }
 
                 if (args[0] == "Drive")
+                {
+                    if (currentVehicle is Bus)
+                    {
+                        bus.IsEmpty = true;
+                    }
+                    Console.WriteLine(currentVehicle.Drive(double.Parse(args[2])));
+                    bus.IsEmpty = false;
+                }
+                else if (args[0] == "DriveEmpty")
                 {
                     Console.WriteLine(currentVehicle.Drive(double.Parse(args[2])));
                 }
@@ -40,6 +55,7 @@ namespace _01_Vehicles.Core
 
             Console.WriteLine(car);
             Console.WriteLine(truck);
+            Console.WriteLine(bus);
         }
     }
 }

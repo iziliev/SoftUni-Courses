@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _01_Vehicles.Models
+namespace _02_Vehicles_Extension.Models
 {
     public class Truck : Vehicle
     {
-        public Truck(double fuel, double fuelConsumption)
-            : base(fuel, fuelConsumption)
+        public Truck(double tankCapacity, double fuel, double fuelConsumption)
+            : base(tankCapacity, fuel, fuelConsumption)
         {
         }
 

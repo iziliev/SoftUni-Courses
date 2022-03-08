@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace _01_Vehicles.Contracts
+﻿namespace _02_Vehicles_Extension.Contracts
 {
     public interface IVehicle
     {
@@ -10,11 +6,16 @@ namespace _01_Vehicles.Contracts
 
         public double FuelConsumption { get; }
 
+        public double TankCapacity { get; }
+
         public string Drive(double distance);
 
         public void Refuel(double liters);
 
         public bool CanDrive(double distance);
 
+        public bool CanRefuel(double liters);
+
+        public bool IsEmpty { get; set; }
     }
 }

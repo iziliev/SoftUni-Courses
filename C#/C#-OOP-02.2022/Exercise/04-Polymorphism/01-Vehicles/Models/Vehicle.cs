@@ -13,18 +13,33 @@ namespace _01_Vehicles.Models
             this.FuelConsumption = fuelConsumption;
         }
 
-        public double Fuel {get; protected set;}
+        public double Fuel { get; private set; }
 
         public virtual double FuelConsumption { get; protected set; }
 
-        public bool CanDrive(int distance)
-            =>this.Fuel -(this.FuelConsumption*distance)>=0;
+        public bool CanDrive(double distance)
+        {
+            return this.Fuel - this.FuelConsumption * distance >= 0;
+        }
 
-        public abstract string Drive(int distance);
+        public string Drive(double distance)
+        {
+            if (CanDrive(distance))
+            {
+                this.Fuel -= this.FuelConsumption * distance;
+                return $"{GetType().Name} travelled {distance} km";
+            }
+            return $"{GetType().Name} needs refueling";
+        }
 
         public virtual void Refuel(double liters)
         {
             this.Fuel += liters;
+        }
+
+        public override string ToString()
+        {
+            return $"{GetType().Name}: {this.Fuel:F2}";
         }
     }
 }
