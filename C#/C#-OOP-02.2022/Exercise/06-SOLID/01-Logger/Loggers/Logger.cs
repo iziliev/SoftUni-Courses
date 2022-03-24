@@ -1,5 +1,5 @@
 ﻿using _01_Logger.Appender;
-using _01_Logger.ReportLevel;
+using _01_Logger.ReportLevels;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,59 +10,66 @@ namespace _01_Logger.Loggers
     {
         public Logger(params IAppender[] appenders)
         {
-            this.Appenders = new List<IAppender>(appenders);
-            //this.Appenders.AddRange(appenders);
+            this.Appenders = appenders;
         }
 
-        public List<IAppender> Appenders { get; }
+        public IAppender[] Appenders { get; private set; }
 
-        public void Critical(string dateTime, string message)
+        public void Critical(string date, string message)
         {
-            Log(dateTime,LogLevel.Critical, message);
-        }
-
-        public void Error(string dateTime,string message)
-        {
-            Log(dateTime, LogLevel.Error,message);
-        }
-
-        public void Fatal(string dateTime, string message)
-        {
-            Log(dateTime,LogLevel.Fatal,message);
-        }
-
-        public void Info(string dateTime, string message)
-        {
-            Log(dateTime, LogLevel.Info ,message);
-        }
-
-        public void Warning(string dateTime, string message)
-        {
-            Log(dateTime, LogLevel.Warning,message);
-        }
-
-        public string GetLoggerInfo()
-        {
-            var sb = new StringBuilder();
-            foreach (var item in this.Appenders)
+            foreach (var appender in this.Appenders)
             {
-                sb.AppendLine(item.GetAppenderInfo());
-            }
-
-            return sb.ToString().Trim();
-        }
-
-        private void Log(string dateTime, LogLevel level,string message)
-        {
-            foreach (IAppender appender in Appenders)
-            {
-                if (level>=appender.ReportLevel)
+                if (ReportLevel.Critical >= appender.ReportLevel)
                 {
-                    appender.AppendMessage(dateTime, level, message);
+                    appender.Append(date, ReportLevel.Critical, message);
+                }
+            }
+            
+        }
+
+        public void Error(string date, string message)
+        {
+            foreach (var appender in this.Appenders)
+            {
+                if (ReportLevel.Error >= appender.ReportLevel)
+                {
+                    appender.Append(date, ReportLevel.Error, message);
                 }
             }
         }
 
+        public void Fatal(string date, string message)
+        {
+            foreach (var appender in this.Appenders)
+            {
+                if (ReportLevel.Fatal >= appender.ReportLevel)
+                {
+                    appender.Append(date, ReportLevel.Fatal, message);
+                }
+                
+            }
+        }
 
+        public void Info(string date, string message)
+        {
+            foreach (var appender in this.Appenders)
+            {
+                if (ReportLevel.Info >= appender.ReportLevel)
+                {
+                    appender.Append(date, ReportLevel.Info, message);
+                }
+            }
+        }
+
+        public void Warning(string date, string message)
+        {
+            foreach (var appender in this.Appenders)
+            {
+                if (ReportLevel.Warning >= appender.ReportLevel)
+                {
+                    appender.Append(date, ReportLevel.Warning, message);
+                }
+            }
+        }
     }
 }

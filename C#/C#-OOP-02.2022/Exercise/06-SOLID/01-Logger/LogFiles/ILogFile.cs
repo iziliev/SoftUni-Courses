@@ -8,6 +8,6 @@ namespace _01_Logger.LogFiles
     {
         public int Size { get; }
 
-        public void Write(string message);
+        public void Write(string messages);
     }
 }

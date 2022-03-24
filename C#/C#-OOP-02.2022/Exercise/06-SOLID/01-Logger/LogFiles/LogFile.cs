@@ -12,11 +12,16 @@ namespace _01_Logger.LogFiles
         {
             this.sb = new StringBuilder();
         }
-        public int Size => sb.ToString().Where(x => char.IsLetter(x)).Sum(x => x);
 
-        public void Write(string message)
+        public int Size 
+            => this.sb
+            .ToString()
+            .Where(x=>char.IsLetter(x))
+            .Sum(x=>x);
+
+        public void Write(string messages)
         {
-            sb.Append(message);
+            sb.Append(messages);
         }
     }
 }

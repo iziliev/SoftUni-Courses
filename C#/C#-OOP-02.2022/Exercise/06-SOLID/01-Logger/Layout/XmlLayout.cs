@@ -6,11 +6,12 @@ namespace _01_Logger.Layout
 {
     public class XmlLayout : ILayout
     {
-        public string Format => 
+        public string Format
+            => 
 @"<log>
-    <date>{0}</date>
-    <level>{1}</level>
-    <message>{2}</message>
+<date>{0}</date>
+<level>{1}</level>
+<message>{2}</message>
 </log>";
     }
 }

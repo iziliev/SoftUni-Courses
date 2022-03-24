@@ -6,8 +6,4 @@
     <RootNamespace>_01_Logger</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Output\" />
-  </ItemGroup>
-
 </Project>

@@ -1,5 +1,5 @@
 ﻿using _01_Logger.Layout;
-using _01_Logger.ReportLevel;
+using _01_Logger.ReportLevels;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,12 +13,10 @@ namespace _01_Logger.Appender
         {
         }
 
-        public override void AppendMessage(string dateTime, LogLevel level, string message)
+        public override void Append(string dateTime, ReportLevel level, string message)
         {
             this.Count++;
-            var appendMessage = string.Format(this.Layout.Format, dateTime, level, message);
-            Console.WriteLine(appendMessage);
+            Console.WriteLine(string.Format(Layout.Format, dateTime, level, message));
         }
-
     }
 }
