@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String symbol = scan.nextLine();
+
+        if ((symbol.equals("a")) || (symbol.equals("e")) || (symbol.equals("i"))
+                || (symbol.equals("o")) || (symbol.equals("u")))
+        {
+             System.out.println("vowel");
+        }
+        else if (symbol.matches("\\d"))
+        {
+             System.out.println("digit");
+        }
+        else
+        {
+             System.out.println("other");
+        }
+    }
+}

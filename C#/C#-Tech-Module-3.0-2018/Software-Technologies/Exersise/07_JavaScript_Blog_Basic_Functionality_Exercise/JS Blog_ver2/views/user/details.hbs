@@ -1,0 +1,50 @@
+<div class="container body-content span=8 offset=2">
+    <div class="container body-content">
+    <!--<div class="row"></div>-->
+        <div class="form-horizontal">
+            <h4>Personal info</h4>
+            <article class="well">
+                <div class="form-group">
+                    <h4 class="col-sm-2 control-label">Full Name:</h4>
+                    <div class="col-sm-6 control-label" style="text-align:left">
+                        <h4>{{user.fullName}}</h4>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <h4 class="col-sm-2 control-label">Email:</h4>
+                    <div class="col-sm-6 control-label" style="text-align:left">
+                        <h4>{{user.email}}</h4>
+                    </div>
+                </div>
+            </article>
+            <h4>Activities</h4>
+            <article class="well">
+				<div class="form-group">
+                    <h4 class="col-sm-2 control-label">Written articles:</h4>
+                    <div class="col-sm-2 control-label" style="text-align:left">
+                        {{#each articles}}<h4>{{this.title}}</h4>{{/each}}
+                        
+                        
+                    </div>
+                </div>
+            </article>
+            <div class="well">
+                <div class="form-group">
+                    <h4 class="col-sm-4 control-label">Do you want to see yours article?</h4>
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <a class="btn btn-primary" href="../article/userArticles">Yes</a>
+                        <a class="btn btn-default" href="/">No</a>
+                    </div>
+                </div>
+            </div>
+                
+                <!--<footer>
+                    <div class="pull-right" style="margin-bottom:70px;">
+                        <a class="btn btn-default btn-xs" href="/" style="margin: 0px 0px 15px 0">&laquo; Back</a>
+                    </div>
+                </footer>-->
+            
+        </div>
+    </div>
+</div>

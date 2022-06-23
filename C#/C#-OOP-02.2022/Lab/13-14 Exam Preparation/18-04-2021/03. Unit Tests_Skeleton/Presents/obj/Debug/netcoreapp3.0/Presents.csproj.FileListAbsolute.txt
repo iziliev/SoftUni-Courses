@@ -1,0 +1,14 @@
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\bin\Debug\netcoreapp3.0\Presents.exe
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\bin\Debug\netcoreapp3.0\Presents.deps.json
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\bin\Debug\netcoreapp3.0\Presents.runtimeconfig.json
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\bin\Debug\netcoreapp3.0\Presents.runtimeconfig.dev.json
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\bin\Debug\netcoreapp3.0\Presents.dll
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\bin\Debug\netcoreapp3.0\Presents.pdb
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\obj\Debug\netcoreapp3.0\Presents.csproj.AssemblyReference.cache
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\obj\Debug\netcoreapp3.0\Presents.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\obj\Debug\netcoreapp3.0\Presents.AssemblyInfoInputs.cache
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\obj\Debug\netcoreapp3.0\Presents.AssemblyInfo.cs
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\obj\Debug\netcoreapp3.0\Presents.csproj.CoreCompileInputs.cache
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\obj\Debug\netcoreapp3.0\Presents.dll
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\obj\Debug\netcoreapp3.0\Presents.pdb
+E:\GitHub\SoftUni-Courses\C#\C#-OOP-02.2022\Lab\13-14 Exam Preparation\18-04-2021\03. Unit Tests_Skeleton\Presents\obj\Debug\netcoreapp3.0\Presents.genruntimeconfig.cache
