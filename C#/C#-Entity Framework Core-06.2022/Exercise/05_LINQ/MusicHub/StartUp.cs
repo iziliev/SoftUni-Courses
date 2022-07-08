@@ -6,6 +6,7 @@
     using System.Text;
     using Data;
     using Initializer;
+    using Microsoft.EntityFrameworkCore;
 
     public class StartUp
     {
@@ -14,7 +15,7 @@
             MusicHubDbContext context =
                 new MusicHubDbContext();
 
-            DbInitializer.ResetDatabase(context);
+            //DbInitializer.ResetDatabase(context);
 
             //Problem 02. All Albums Produced by Given Producer
             //var producerId = int.Parse(Console.ReadLine());
@@ -31,8 +32,11 @@
             var sb = new StringBuilder();
 
             var albumsInfo = context.Albums
+                .Where(a => a.ProducerId.Value == producerId)
+                .Include(a=>a.Producer)
+                .Include(a=>a.Songs)
+                .ThenInclude(s=>s.Writer)
                 .ToArray()
-                .Where(a => a.ProducerId == producerId)
                 .Select(a => new
                 {
                     AlbumName = a.Name,
@@ -81,6 +85,11 @@
             var sb = new StringBuilder();
 
             var songsByDuration = context.Songs
+                .Include(s=>s.SongPerformers)
+                .ThenInclude(sp=>sp.Performer)
+                .Include(s=>s.Writer)
+                .Include(s=>s.Album)
+                .ThenInclude(s=>s.Producer)
                 .ToArray()
                 .Where(s => s.Duration.TotalSeconds > duration)
                 .Select(s => new
