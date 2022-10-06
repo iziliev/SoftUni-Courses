@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoSQLCRUDOperations", "NoSQLCRUDOperations\NoSQLCRUDOperations.csproj", "{978E3C0E-BA15-4BD4-A393-A7AF7FEF3FCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{978E3C0E-BA15-4BD4-A393-A7AF7FEF3FCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{978E3C0E-BA15-4BD4-A393-A7AF7FEF3FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{978E3C0E-BA15-4BD4-A393-A7AF7FEF3FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{978E3C0E-BA15-4BD4-A393-A7AF7FEF3FCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F854976-EF62-4586-A77A-0CF834EE6952}
+	EndGlobalSection
+EndGlobal

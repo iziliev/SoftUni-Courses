@@ -1,0 +1,23 @@
+﻿@model ProductViewModel
+
+<h4>@ViewData["Title"]</h4>
+
+<form asp-controller="Product" asp-action="Buy" method="post">
+    <input type="hidden" asp-for="@Model.Id" />
+    <input asp-for="ModifiedDate" type="hidden" value="@DateTime.UtcNow.ToString(CultureInfo.InvariantCulture)" />
+    <div class="form-group">
+        <label asp-for="Name">Product name</label>
+        <input asp-for="Name" class="form-control" disabled>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">Product price</label>
+        <input asp-for="Price" class="form-control" disabled>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity">Product quantity</label>
+        <input asp-for="Quantity" class="form-control" placeholder="Buy quantity" min="0" max="@ViewBag.Message">
+    </div>
+    <div class="form-group">
+        <input class="btn btn-primary mt-3" type="submit" value="Buy" />
+    </div>
+</form>

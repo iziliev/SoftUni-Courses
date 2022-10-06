@@ -1,0 +1,48 @@
+﻿@model ChatViewModel
+
+@{
+    ViewData["Title"] = "Chat";
+}
+
+@if (Model.Messages != null)
+{
+    @foreach (var message in Model.Messages)
+    {
+
+        <div class="card mb-2">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>@message.Message</p>
+                    <footer class="blockquote-footer">@message.Sender</footer>
+                </blockquote>
+            </div>
+        </div>
+
+    }
+}
+else
+{
+    <p>No messages yet!</p>
+}
+<br />
+<p class="border-top footer text-muted"></p>
+<form asp-controller="Chat" asp-action="Send" method="post">
+    <div class="input-group mb-3">
+        <input asp-for="CurrentMessage.Sender" type="text" class="form-control" placeholder="Sender's name" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-success" type="submit">Post</button>
+        </div>
+    </div>
+    <span asp-validation-for="CurrentMessage.Sender" class="small text-danger col-2"></span>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea asp-for="CurrentMessage.Message" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+    </div>
+    <span asp-validation-for="CurrentMessage.Message" class="small text-danger col-2"></span>
+    <br />
+    <a class="btn input-group btn-secondary btn-lg btn-block" asp-area="" asp-controller="Chat" asp-action="Show">Clear</a>
+</form>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}

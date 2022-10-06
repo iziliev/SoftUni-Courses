@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Numbers 1 ... " + @ViewBag.Count;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<ul>
+    @for (var i = 1; i <= ViewBag.Count; i++)
+    {
+        <li>@i</li>
+    }
+</ul>
+
+<form method="post">
+    <div class="input-group mb-3">
+        <input name="count" value="@ViewBag.Count" type="number" class="form-control" placeholder="Number" aria-label="Number" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+

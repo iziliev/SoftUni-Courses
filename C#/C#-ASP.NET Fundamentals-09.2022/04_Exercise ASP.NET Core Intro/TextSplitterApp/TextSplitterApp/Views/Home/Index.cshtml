@@ -1,0 +1,32 @@
+﻿@model TextViewModel
+
+@{
+    ViewData["Title"] = "Text Separator Application";
+}
+
+<blockquote class="blockquote text-center">
+    <h5 class="mb-0">@ViewBag.Title</h5>
+</blockquote>
+
+<p class="border-top footer text-muted"></p>
+<br />
+<form asp-controller="Home" asp-action="Split" method="post">
+
+    <div class="input-group mb-3">
+        <input asp-for="@Model.InputText" type="text" class="form-control" placeholder="Text to split" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-success" type="submit">Split Text</button>
+        </div>
+    </div>
+    <span asp-validation-for="@Model.InputText" class="small text-danger col-2"></span>
+    <div class="input-group">
+        <div class="input-group-prepend"></div>
+        <textarea class="form-control" aria-label="With textarea" rows="10" readonly>@Model.SplitedText</textarea>
+    </div>
+    <br />
+    <a class="btn input-group btn-secondary btn-lg btn-block" asp-area="" asp-controller="Home" asp-action="Index">Clear</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

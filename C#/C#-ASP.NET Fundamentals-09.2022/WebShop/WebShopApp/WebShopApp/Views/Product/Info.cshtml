@@ -1,0 +1,21 @@
+﻿@model ProductViewModel
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">
+            <h4>@Model.Name</h4>
+            <h4>@Model.Price BGN</h4>
+        </div>
+        <div class="col-sm-10">
+            <p>@Model.Description</p>
+        </div>
+    </div>
+</div>
+
+<div class="d-grid gap-2 mb-2">
+    <a asp-controller="Product" asp-action="Index" class="btn btn-outline-secondary">Back</a>
+</div>
+

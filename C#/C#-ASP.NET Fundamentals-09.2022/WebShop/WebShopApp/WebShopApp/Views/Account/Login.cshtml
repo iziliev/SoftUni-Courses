@@ -1,0 +1,61 @@
+﻿@model LoginViewModel
+
+<section class="vh-20 gradient-custom">
+    <div class="container py-2 h-50">
+        <div class="row justify-content-center align-items-center h-50">
+            <div class="col-6 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-3">
+                        <h2 class="text-uppercase text-center mb-2">Login</h2>
+                        <img class="rounded mx-auto d-block" src="/images/login.png" width="100" height="100" alt="login">
+                        <form method="post">
+                            <input type="hidden" asp-for="ReturnUrl" />
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="row">
+                                <div class="col-md-3 mb-1">
+                                </div>
+                                <div class="col-md-6 mb-1">
+                                    <div class="form-outline">
+                                        <label class="form-label" asp-for="Username">Username</label>
+                                        <input asp-for="Username" type="text" id="username" class="form-control" />
+                                        <span asp-validation-for="Username" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 mb-1">
+                                </div>
+                                <div class="col-md-6 mb-1">
+                                    <div class="form-outline">
+                                        <label class="form-label" asp-for="Password">Password</label>
+                                        <input asp-for="Password" id="password" class="form-control" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 mb-1">
+                                </div>
+                                <div class="col-md-6 mt-4">
+                                    <div class="form-outline">
+                                        <input class="btn btn-outline-success btn-lg " type="submit" value="Login" />
+                                    </div>
+                                </div>                             
+                            </div>
+                            <div class="row">
+                                <p class="text-center text-muted mt-2 mb-0">
+                                    Don't have an account? <a asp-controller="Account" asp-action="Register" class="fw-bold text-body"><u>Sign Up</u></a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
