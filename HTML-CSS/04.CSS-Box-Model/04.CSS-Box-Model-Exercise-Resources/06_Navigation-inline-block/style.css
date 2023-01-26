@@ -1,0 +1,22 @@
+html {
+    font-family: Helvetica, sans-serif;
+    padding: 30px;
+}
+
+nav,h1,ul,li{
+    display: inline-block;
+}
+
+a{
+    color: green;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+hr{
+    border: solid 1px grey;
+}
+
+li{
+    list-style: none;
+}
