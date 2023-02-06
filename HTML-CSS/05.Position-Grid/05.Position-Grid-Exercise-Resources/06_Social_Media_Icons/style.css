@@ -1,0 +1,40 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css';
+
+ul{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+i.fa-facebook-official:hover{
+    color:rgb(13, 122, 211);
+}
+
+i.fa-twitter:hover{
+    color:rgb(11, 193, 238)
+}
+
+i.fa-google:hover{
+    color:rgb(219, 27, 27)
+}
+
+i.fa-linkedin-square:hover{
+    color:rgb(13, 122, 211)
+}
+
+i.fa-instagram:hover{
+    color:rgb(13, 122, 211)
+}
+
+a{
+    border-radius: 50%;
+}

@@ -1,0 +1,48 @@
+@import 'https://use.fontawesome.com/releases/v5.10.2/css/all.css';
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+section.card{
+    display: block;
+}
+
+.viewport:first-child{
+    display: block;
+    height: 50vh;
+    background-color: aqua;
+    position: relative;
+}
+
+.viewport:last-child{
+    height: 50vh;
+    background-color: lightblue;
+    position: relative;
+}
+
+.viewport:first-child img{
+    width: 300px;
+    height: 200px;
+}
+
+.viewport:last-child img{
+    width: 300px;
+    height: 400px;
+}
+
+.viewport .card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.viewport .card i{
+    position: absolute;
+    bottom: 12px;
+    right: 6px;
+    color: #fff;
+}
+
