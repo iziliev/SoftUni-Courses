@@ -17,6 +17,6 @@ span{
 
 div{
     position: relative;
-    top:-50px;
+    bottom:50px;
     left: 8px;
 }
