@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 65vw;
+}
+
+.container span{
+    border:  1px solid black;
+    padding: 0.5rem;
+}
+
+.container{
+    display: flex;
+}
+
+.container .week{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.container .week .week__item{
+    width: 20%;
+}
+
+.container .week .week__item:nth-child(8),
+.container .week .week__item:nth-child(9){
+    width: 50%;
+}
+.container .week .workweek,
+.container .week .weekend{
+    width: 100%;
+}
+
+.container .notes{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .notes .notes__reminder,
+.container .notes .notes__date{
+    height: 100%;
+}

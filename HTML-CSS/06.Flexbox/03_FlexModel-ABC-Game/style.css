@@ -1,0 +1,35 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+div.container{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    max-width: 15vw;
+    height: 35rem;
+}
+
+span{
+    border: 1px solid black;
+    padding: 20px;
+}
+
+span:nth-child(1){
+    order: 1;
+}
+
+span:nth-child(3){
+    order: 2;
+}
+
+span:nth-child(7){
+    order: 3;
+}
+
+span:nth-child(10){
+    order: 4;
+}
