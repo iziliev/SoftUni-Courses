@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    background-color: lightgray;
+    display: flex;
+    max-width: 80%;
+    margin:3rem 7rem;
+}
+
+.gallery{
+    display: flex;
+}
+
+.gallery ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery ul li{
+    display: flex;
+    flex-basis: 30%;
+    align-items: center;
+    border: 7px solid black;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 3rem;
+}
+
+.gallery ul li img{
+    padding: 30px 20px;
+}

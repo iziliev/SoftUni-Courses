@@ -1,0 +1,104 @@
+body{
+    background-color: #070e27;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+p{
+    color: #7e8bb6;
+}
+
+.header{
+    padding: 24px 64px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid #161d3a;
+    position: sticky;
+    top:0px;
+    background-color: #070e27;
+}
+
+.header .navigation{
+    margin-left: auto;
+}
+
+.header .nav-list{
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+.header .nav-list a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn{
+    background-color:#162044;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color:#fff
+}
+
+#hero{
+    padding: 64px 64px;
+    border-bottom: 1px solid #161d3a;
+}
+
+#hero .welcome{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+#hero .welcome>*{
+    width: 45%;
+}
+
+#hero .welcome .title{
+    font-size: 42px;
+    line-height: 1.2; 
+}
+
+#hero .welcome .info{
+    margin-bottom: 12px;
+}
+
+#hero .hero{
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+#hero .partners{
+    display: flex;
+    margin: 0 auto;
+    max-width: 900px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#features .cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    margin: auto;
+    justify-content: center;
+    gap: 20px;
+}
+
+#features .card{
+    width: 35%;
+    align-items: center;
+    padding: 10px;
+    border:1px solid #7e8bb6;
+    border-radius: 10px;
+}
+
+#features .card>*{
+    padding: 10px;
+}

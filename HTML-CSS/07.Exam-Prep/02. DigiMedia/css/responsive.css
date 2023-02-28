@@ -1,0 +1,74 @@
+@media screen and (max-width:600px){
+
+    #home .container .navbar{
+        justify-content: center;
+    }
+
+    #navbarSupportedContent.collapse.navbar-collapse{
+        display: none;
+    }
+
+    .navbar-light .navbar-brand{
+        margin: 0;
+    }
+
+    .hero img{
+        display: none;
+    }
+
+    .container-fluid.hero{
+        text-align: center;
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+
+    .hero-btns{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+    }
+
+    #about-us .container-fluid{
+        text-align: center;
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+
+    #about-us.services{
+        margin-top: 150px;
+    }
+
+    #about-us .col-sm-12{
+        margin-bottom: 50px;
+    }
+    
+    #about-us.services .row{
+        flex-direction: column;
+    }
+
+    #about-us .col-sm-6{
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .about .col-12{
+        margin-top: 100px;
+        text-align: center;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    #contact-us{
+        text-align: center;
+    }
+
+    #contact-us .hero-btns.contact-btn{
+        display: none;
+    }
+
+    footer .contact-nav{
+        display: flex;
+        flex-direction: column;
+    }
+}
